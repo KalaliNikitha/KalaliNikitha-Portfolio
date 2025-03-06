@@ -26,25 +26,14 @@
         h1 {
             color: #a5d8ff; /* Color used for Technical Skills */
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em; /* Increased the font size */
         }
 
-        h2 {
-            color: #a5d8ff; /* Color for h2 */
+        h2, h3, h4 {
+            color: #a5d8ff; /* Updated to light blue */
             font-size: 2em;
             padding-bottom: 5px;
-        }
-
-        h3 {
-            color: #ff6347; /* Color for h3 */
-            font-size: 1.8em;
-            padding-bottom: 5px;
-        }
-
-        h4 {
-            color: #32cd32; /* Color for h4 */
-            font-size: 1.5em;
-            padding-bottom: 5px;
+            text-align: center;
         }
 
         section {
@@ -58,7 +47,7 @@
         .about-text {
             color: #ccc;
             max-width: 600px;
-            text-align: justify;
+            text-align: center;
         }
 
         .skills-list {
@@ -68,6 +57,7 @@
 
         .skills-list li {
             margin: 5px 0;
+            text-align: center;
         }
 
         .white-heading {
@@ -80,6 +70,18 @@
             height: 150px;
             border-radius: 50%;
             margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .project-section {
+            text-align: center;
+            color: #a5d8ff;
+        }
+
+        .project-section h3 {
+            font-size: 2em;
         }
     </style>
 </head>
@@ -119,6 +121,12 @@
                 <li><strong>ETL and Workflow Tools:</strong> AWS Glue, Alteryx, SSIS, Azure Data Factory, Informatica-PowerCenter, Talend.</li>
             </ul>
         </div>
+    </section>
+
+    <!-- New Project Section -->
+    <section class="project-section">
+        <h3>Project: Optimizing the Inventory</h3>
+        <p>This project focuses on streamlining the inventory management system to improve efficiency, reduce costs, and improve order accuracy by forecasting demand and automating reorder processes.</p>
     </section>
 
     <section id="techniques">
