@@ -183,7 +183,7 @@
             padding: 15px;
             margin: 10px auto;
             background-color: #2a2a2a;
-            background-image: url('Image.jpg'); /* Added background image */
+            background-image: url('Image.jpg'); /* Corrected image filename */
             background-size: cover; /* Cover the entire tab */
             background-position: center; /* Center the image */
             background-repeat: no-repeat; /* Don't repeat the image */
@@ -251,6 +251,20 @@
 
         .contact-info a:hover {
             text-decoration: underline;
+        }
+        
+        /* Add a background image to the body */
+        body {
+            background-image: url('Image.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        /* Add some transparency to sections for better visibility of the background */
+        section, .nav-menu, header, footer {
+            background-color: rgba(31, 31, 31, 0.85);
         }
     </style>
 </head>
