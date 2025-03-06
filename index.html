@@ -24,16 +24,13 @@
         }
 
         h1 {
-            color: #a5d8ff; /* Color used for Technical Skills */
+            color: #00bcd4;
             margin: 0;
-            font-size: 3em; /* Increased the font size */
         }
 
-        h2, h3, h4 {
-            color: #a5d8ff; /* Updated to light blue */
-            font-size: 2em;
-            padding-bottom: 5px;
-            text-align: center;
+        p {
+            color: #ccc;
+            margin: 0;
         }
 
         section {
@@ -42,69 +39,59 @@
             background-color: #1f1f1f;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
             text-align: justify;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+        }
+
+        h2 {
+            color: #00bcd4;
+            text-align: center;
+        }
+
+        h3, h4 {
+            color: #00bcd4;
+            text-align: center;
         }
 
         .about-text {
             color: #ccc;
-            max-width: 800px;
+            max-width: 600px;
             text-align: justify;
-            margin-top: 20px;
+            margin: 0 auto;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .profile-image {
+            max-width: 200px;
+            margin: 20px;
+            border-radius: 50%;
         }
 
         .skills-list {
             list-style-type: none;
             padding: 0;
-            text-align: justify;
-            width: 100%;
+            margin: 0;
+            text-align: center;
         }
 
         .skills-list li {
-            margin: 5px 0;
-        }
-
-        .white-heading {
-            color: #f0f5f390;
-            font-size: 1.2em;
-        }
-
-        .profile-image {
-            width: 150px; /* Reduced image size */
-            height: 150px;
-            border-radius: 50%;
-            margin-top: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .project-section {
-            text-align: center;
-            color: #a5d8ff;
-        }
-
-        .project-section h3 {
-            font-size: 2em;
-        }
-
-        /* Styling for content text */
-        .project-description {
-            color: #ffffff;
-            text-align: center;
-            padding: 10px;
+            margin: 10px 0;
         }
 
         footer {
-            background-color: #1f1f1f;
-            color: #ccc;
-            padding: 10px;
             text-align: center;
+            padding: 10px;
+            background-color: #1f1f1f;
+        }
+
+        a {
+            color: #00bcd4;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -130,8 +117,9 @@
     </section>
 
     <section id="skills">
-        <h2>Technical Skills</h2>
+        <h2>Skills</h2>
         <div class="about-text">
+            <h3>Technical Skills</h3>
             <ul class="skills-list">
                 <li><strong>Programming Languages:</strong> Python, Java, R, SAS, MATLAB, HTML/CSS, JavaScript, C++.</li>
                 <li><strong>Big Data Technologies:</strong> Apache Spark, PySpark, Databricks.</li>
@@ -146,84 +134,21 @@
         </div>
     </section>
 
-    <!-- New Project Section -->
-    <section class="project-section">
-        <h3>Project: Optimizing the Inventory</h3>
-        <p class="project-description">This project focuses on streamlining the inventory management system to improve efficiency, reduce costs, and improve order accuracy by forecasting demand and automating reorder processes.</p>
+    <section id="project">
+        <h2>Project: Optimizing Efficiency in Inventory</h2>
+        <p class="about-text" style="color: white;">This project focuses on streamlining the inventory management system to improve efficiency, reduce costs, and improve order accuracy by forecasting demand and automating reorder processes.</p>
     </section>
 
     <section id="techniques">
         <h2>Techniques Used in Project</h2>
-        <div class="about-text">
-            <ul>
-                <li><strong>Predictive Modeling:</strong> XGBoost, Random Forest, Gradient Boosting, LightGBM</li>
-                <li><strong>Time Series Analysis:</strong> ARIMA, SARIMA, Exponential Smoothing</li>
-                <li><strong>Classification Models:</strong> Logistic Regression, Decision Tree, K-Nearest Neighbors</li>
-                <li><strong>Feature Engineering:</strong> PCA, One-Hot Encoding, Feature Scaling</li>
-                <li><strong>Statistical Testing:</strong> ANOVA, T-tests, Chi-Square Tests</li>
-                <li><strong>Optimization Techniques:</strong> Hyperparameter Tuning, Grid Search</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="eda">
-        <h2>Exploratory Data Analysis (EDA)</h2>
-        <div class="about-text">
-            <p>Exploratory Data Analysis (EDA) plays a seminal role in examining data and serving as the very foundation for further modelling efforts. The purpose of EDA is to spot patterns, trends, and relationships among the data. Afterwards, the identified patterns, trends, and relationships aid the researcher to develop effective analytical strategies. The exploration in this initial step helps to understand the relationship between different dimensions of the dataset and make decisions regarding modeling later.</p>
-            <p><a href="https://github.com/KalaliNikitha/KalaliNikitha-Portfolio.git" target="_blank">View EDA</a></p>
-        </div>
-    </section>
-
-    <section id="methodology">
-        <h2>Methodology</h2>
-        <div class="about-text">
-            <p>The aim is to describe the forecasting methods used in our study. All the models are trained and validated by an 80/20 split.</p>
-            <h3>Demand Forecasting with SARIMA:</h3>
-            <p>The SARIMA model was applied to capture seasonal patterns in demand, supporting inventory management by predicting spikes and dips in sales.</p>
-
-            <h3>Sales Forecasting Models:</h3>
-            <p>Regression Models: Linear Regression, Random Forest, Gradient Boosting, K-Neighbors, XGBoost, and LightGBM provided a range of approaches, each optimized through hyperparameter tuning to forecast sales trends accurately.</p>
-
-            <h3>Late Delivery Prediction:</h3>
-            <p>Classification models (Logistic Regression, Decision Tree, Random Forest, etc.) were evaluated for delivery predictions, with Random Forest and Logistic Regression showing high accuracy in distinguishing outcomes.</p>
-
-            <h3>Fraud Detection:</h3>
-            <p>Models like Random Forest and XGBoost achieved near-perfect accuracy in fraud detection, with metrics such as ROC-AUC confirming high reliability.</p>
-
-            <h3>Customer Segmentation with RFM Analysis:</h3>
-            <p>RFM (Recency, Frequency, Monetary) analysis categorized customers by purchasing behavior, enabling targeted engagement for different loyalty segments.</p>
-
-            <p><a href="https://github.com/KalaliNikitha/KalaliNikitha-Portfolio.git" target="_blank">View Methodology</a></p>
-        </div>
-    </section>
-
-    <section id="results">
-        <h2>Final Results</h2>
-        <div class="about-text">
-            <p>Sales Forecasting Models and Evaluation Metrics:</p>
-            <h3>SARIMA Model:</h3>
-            <p>Used for short-term demand forecasting, capturing seasonal trends but limited in handling volatility.</p>
-
-            <h3>Regression Models:</h3>
-            <p>Linear Regression, Gradient Boosting, Lasso, Ridge, ElasticNet, and AdaBoost were used, with Linear Regression showing the highest R² score, though potentially overfitting.</p>
-
-            <h3>Safety Stock and Reorder Threshold:</h3>
-            <p>Calculated to prevent stockouts, optimizing inventory by adjusting stock levels based on sales forecasts.</p>
-
-            <h3>Late Delivery Prediction:</h3>
-            <p>Classification Models: Logistic Regression, Decision Tree, Random Forest, K-Nearest Neighbors, and AdaBoost were evaluated; Logistic Regression showed the best accuracy, with Random Forest and AdaBoost also performing well.</p>
-
-            <h3>Fraud Detection Models:</h3>
-            <p>Models Used: Logistic Regression, Random Forest, Gradient Boosting, K-Nearest Neighbors, Decision Tree, and XGBoost all achieved high accuracy, with Random Forest showing near-perfect precision.</p>
-
-            <h3>Evaluation:</h3>
-            <p>Confusion Matrix and Precision-Recall Curves helped assess model sensitivity and specificity in fraud detection.</p>
-
-            <h3>RFM Analysis and Customer Segmentation:</h3>
-            <p>Customer Segmentation: RFM analysis segmented customers by recency, frequency, and monetary value into groups like "Loyal Customers" and "Need Attention" to inform targeted engagement.</p>
-
-            <p><a href="https://github.com/KalaliNikitha/KalaliNikitha-Portfolio.git" target="_blank">View Results</a></p>
-        </div>
+        <ul>
+            <li><strong>Predictive Modeling:</strong> XGBoost, Random Forest, Gradient Boosting, LightGBM</li>
+            <li><strong>Time Series Analysis:</strong> ARIMA, SARIMA, Exponential Smoothing</li>
+            <li><strong>Classification Models:</strong> Logistic Regression, Decision Tree, K-Nearest Neighbors</li>
+            <li><strong>Feature Engineering:</strong> PCA, One-Hot Encoding, Feature Scaling</li>
+            <li><strong>Statistical Testing:</strong> ANOVA, T-tests, Chi-Square Tests</li>
+            <li><strong>Optimization Techniques:</strong> Hyperparameter Tuning, Grid Search</li>
+        </ul>
     </section>
 
     <footer>
