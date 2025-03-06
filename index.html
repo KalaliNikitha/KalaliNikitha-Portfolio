@@ -123,131 +123,309 @@
             padding: 10px;
             text-align: center;
         }
+
+        /* Navigation Menu Styles */
+        .nav-menu {
+            background-color: #1f1f1f;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item {
+            margin: 0 5px;
+        }
+
+        .nav-link {
+            color: #a5d8ff;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Dropdown Section Styles */
+        .section-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-active {
+            display: flex;
+        }
+
+        .section-header {
+            cursor: pointer;
+            position: relative;
+            padding: 15px;
+            margin: 10px auto;
+            background-color: #2a2a2a;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .section-header:hover {
+            background-color: #333;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 1.8em;
+        }
+
+        .section-header::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #a5d8ff;
+        }
+
+        .section-header.active::after {
+            content: '-';
+        }
+
+        #featured-heading {
+            text-align: center;
+            color: #a5d8ff;
+            font-size: 2.5em;
+            margin: 40px 0 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>Nikitha Kalali</h1>
-        <p>Data Engineer</p>
+        <p>Data Engineering Architect with End-to-End Pipeline Expertise</p>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-container">
-            <img src="imageme.jpg" alt="Nikitha Kalali" class="profile-image">
-            <div class="about-text">
-                <p>Hi, I am Nikitha Kalali. My path in the data world began at Sigma Software, where I first immersed myself in the fundamentals of data management. There, I built ETL processes from the ground up, working with Apache Kafka to enable real-time data streaming. I learned to transform messy, unstructured data into clean, usable formats – a skill that would prove invaluable throughout my career.</p>
-                <p>As my expertise grew, so did the complexity of my projects. I found myself designing database schemas across multiple platforms and implementing data architecture solutions that enhanced information flow across systems. This early experience taught me how to think holistically about data ecosystems.</p>
-                <p>My journey continued at Amazon, where I stepped into the world of financial data analytics. Here, I tackled massive datasets, optimizing SQL queries and building automated quality checks. I enjoyed creating interactive dashboards that brought data to life for business users. The fast-paced environment pushed me to develop more efficient solutions, leading to my promotion to Senior Associate.</p>
-                <p>In my elevated role, I partnered with HR and engineering teams to optimize data pipelines and ensure reliable payroll processing. I engineered scalable solutions using AWS cloud technologies, learning to balance performance with data quality. These experiences deepened my understanding of how data directly impacts business operations.</p>
-                <p>Throughout this journey, I've evolved from someone who simply processed data to a professional who architects solutions that drive business value. My experience spans the full data lifecycle – from collection and storage to transformation and visualization – always focused on uncovering the stories hidden within the numbers.</p>
+    <nav class="nav-menu">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
+            <li class="nav-item"><a href="#skills" class="nav-link">Technical Skills</a></li>
+            <li class="nav-item"><a href="#project" class="nav-link">Project</a></li>
+            <li class="nav-item"><a href="#techniques" class="nav-link">Techniques</a></li>
+            <li class="nav-item"><a href="#eda" class="nav-link">EDA</a></li>
+            <li class="nav-item"><a href="#methodology" class="nav-link">Methodology</a></li>
+            <li class="nav-item"><a href="#results" class="nav-link">Results</a></li>
+        </ul>
+    </nav>
+
+    <div class="section-container">
+        <div id="about-header" class="section-header">
+            <h2>About Me</h2>
+        </div>
+        <section id="about" class="section-content">
+            <div class="about-container">
+                <img src="imageme.jpg" alt="Nikitha Kalali" class="profile-image">
+                <div class="about-text">
+                    <p>Hi, I am Nikitha Kalali. My path in the data world began at Sigma Software, where I first immersed myself in the fundamentals of data management. There, I built ETL processes from the ground up, working with Apache Kafka to enable real-time data streaming. I learned to transform messy, unstructured data into clean, usable formats – a skill that would prove invaluable throughout my career.</p>
+                    <p>As my expertise grew, so did the complexity of my projects. I found myself designing database schemas across multiple platforms and implementing data architecture solutions that enhanced information flow across systems. This early experience taught me how to think holistically about data ecosystems.</p>
+                    <p>My journey continued at Amazon, where I stepped into the world of financial data analytics. Here, I tackled massive datasets, optimizing SQL queries and building automated quality checks. I enjoyed creating interactive dashboards that brought data to life for business users. The fast-paced environment pushed me to develop more efficient solutions, leading to my promotion to Senior Associate.</p>
+                    <p>In my elevated role, I partnered with HR and engineering teams to optimize data pipelines and ensure reliable payroll processing. I engineered scalable solutions using AWS cloud technologies, learning to balance performance with data quality. These experiences deepened my understanding of how data directly impacts business operations.</p>
+                    <p>Throughout this journey, I've evolved from someone who simply processed data to a professional who architects solutions that drive business value. My experience spans the full data lifecycle – from collection and storage to transformation and visualization – always focused on uncovering the stories hidden within the numbers.</p>
+                </div>
             </div>
+        </section>
+
+        <div id="skills-header" class="section-header">
+            <h2>Technical Skills</h2>
         </div>
-    </section>
+        <section id="skills" class="section-content">
+            <div class="about-text">
+                <ul class="skills-list">
+                    <li><strong>Programming Languages:</strong> Python, Java, R, SAS, MATLAB, HTML/CSS, JavaScript, C++.</li>
+                    <li><strong>Big Data Technologies:</strong> Apache Spark, PySpark, Databricks.</li>
+                    <li><strong>Database/Data Technologies:</strong> SQL, T-SQL, PostgreSQL, MySQL, Oracle, MongoDB.</li>
+                    <li><strong>Machine Learning & AI Frameworks:</strong> TensorFlow, Keras, PyTorch.</li>
+                    <li><strong>Cloud Platforms:</strong> AWS, Microsoft Azure, GCP.</li>
+                    <li><strong>Version Control Systems:</strong> Git, Jenkins.</li>
+                    <li><strong>Data Visualization Tools:</strong> Tableau, PowerBI, Looker, Excel, DAX, MicroStrategy.</li>
+                    <li><strong>Data Warehousing:</strong> Snowflake, AWS Redshift, Data Lakes.</li>
+                    <li><strong>ETL and Workflow Tools:</strong> AWS Glue, Alteryx, SSIS, Azure Data Factory, Informatica-PowerCenter, Talend.</li>
+                </ul>
+            </div>
+        </section>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="about-text">
-            <ul class="skills-list">
-                <li><strong>Programming Languages:</strong> Python, Java, R, SAS, MATLAB, HTML/CSS, JavaScript, C++.</li>
-                <li><strong>Big Data Technologies:</strong> Apache Spark, PySpark, Databricks.</li>
-                <li><strong>Database/Data Technologies:</strong> SQL, T-SQL, PostgreSQL, MySQL, Oracle, MongoDB.</li>
-                <li><strong>Machine Learning & AI Frameworks:</strong> TensorFlow, Keras, PyTorch.</li>
-                <li><strong>Cloud Platforms:</strong> AWS, Microsoft Azure, GCP.</li>
-                <li><strong>Version Control Systems:</strong> Git, Jenkins.</li>
-                <li><strong>Data Visualization Tools:</strong> Tableau, PowerBI, Looker, Excel, DAX, MicroStrategy.</li>
-                <li><strong>Data Warehousing:</strong> Snowflake, AWS Redshift, Data Lakes.</li>
-                <li><strong>ETL and Workflow Tools:</strong> AWS Glue, Alteryx, SSIS, Azure Data Factory, Informatica-PowerCenter, Talend.</li>
-            </ul>
+        <div id="project-header" class="section-header">
+            <h2>Project: Optimizing the Inventory</h2>
         </div>
-    </section>
+        <section id="project" class="section-content project-section">
+            <p class="project-description">This project focuses on streamlining the inventory management system to improve efficiency, reduce costs, and improve order accuracy by forecasting demand and automating reorder processes.</p>
+        </section>
 
-    <!-- Project Section -->
-    <section id="project" class="project-section">
-        <h3>Project: Optimizing the Inventory</h3>
-        <p class="project-description">This project focuses on streamlining the inventory management system to improve efficiency, reduce costs, and improve order accuracy by forecasting demand and automating reorder processes.</p>
-    </section>
-
-    <section id="techniques">
-        <h2>Techniques Used in Project</h2>
-        <div class="about-text">
-            <ul class="skills-list">
-                <li><strong>Predictive Modeling:</strong> XGBoost, Random Forest, Gradient Boosting, LightGBM</li>
-                <li><strong>Time Series Analysis:</strong> ARIMA, SARIMA, Exponential Smoothing</li>
-                <li><strong>Classification Models:</strong> Logistic Regression, Decision Tree, K-Nearest Neighbors</li>
-                <li><strong>Feature Engineering:</strong> PCA, One-Hot Encoding, Feature Scaling</li>
-                <li><strong>Statistical Testing:</strong> ANOVA, T-tests, Chi-Square Tests</li>
-                <li><strong>Optimization Techniques:</strong> Hyperparameter Tuning, Grid Search</li>
-            </ul>
+        <div id="techniques-header" class="section-header">
+            <h2>Techniques Used in Project</h2>
         </div>
-    </section>
+        <section id="techniques" class="section-content">
+            <div class="about-text">
+                <ul class="skills-list">
+                    <li><strong>Predictive Modeling:</strong> XGBoost, Random Forest, Gradient Boosting, LightGBM</li>
+                    <li><strong>Time Series Analysis:</strong> ARIMA, SARIMA, Exponential Smoothing</li>
+                    <li><strong>Classification Models:</strong> Logistic Regression, Decision Tree, K-Nearest Neighbors</li>
+                    <li><strong>Feature Engineering:</strong> PCA, One-Hot Encoding, Feature Scaling</li>
+                    <li><strong>Statistical Testing:</strong> ANOVA, T-tests, Chi-Square Tests</li>
+                    <li><strong>Optimization Techniques:</strong> Hyperparameter Tuning, Grid Search</li>
+                </ul>
+            </div>
+        </section>
 
-    <section id="eda">
-        <h2>Exploratory Data Analysis (EDA)</h2>
-        <div class="about-text">
-            <p>Exploratory Data Analysis (EDA) plays a seminal role in examining data and serving as the very foundation for further modelling efforts. The purpose of EDA is to spot patterns, trends, and relationships among the data. Afterwards, the identified patterns, trends, and relationships aid the researcher to develop effective analytical strategies. The exploration in this initial step helps to understand the relationship between different dimensions of the dataset and make decisions regarding modeling later.</p>
-            <p><a href="https://github.com/KalaliNikitha/KalaliNikitha-Portfolio.git" target="_blank">View EDA</a></p>
+        <div id="eda-header" class="section-header">
+            <h2>Exploratory Data Analysis (EDA)</h2>
         </div>
-    </section>
+        <section id="eda" class="section-content">
+            <div class="about-text">
+                <p>Exploratory Data Analysis (EDA) plays a seminal role in examining data and serving as the very foundation for further modelling efforts. The purpose of EDA is to spot patterns, trends, and relationships among the data. Afterwards, the identified patterns, trends, and relationships aid the researcher to develop effective analytical strategies. The exploration in this initial step helps to understand the relationship between different dimensions of the dataset and make decisions regarding modeling later.</p>
+                <p><a href="https://github.com/KalaliNikitha/KalaliNikitha-Portfolio.git" target="_blank">View EDA</a></p>
+            </div>
+        </section>
 
-    <section id="methodology">
-        <h2>Methodology</h2>
-        <div class="about-text">
-            <p>The aim is to describe the forecasting methods used in our study. All the models are trained and validated by an 80/20 split.</p>
-            
-            <div class="subheading">SARIMA Model</div>
-            <p>The SARIMA model was applied to capture seasonal patterns in demand, supporting inventory management by predicting spikes and dips in sales.</p>
-
-            <div class="subheading">Sales Forecasting</div>
-            <p>Regression Models: Linear Regression, Random Forest, Gradient Boosting, K-Neighbors, XGBoost, and LightGBM provided a range of approaches, each optimized through hyperparameter tuning to forecast sales trends accurately.</p>
-
-            <div class="subheading">Late Delivery</div>
-            <p>Classification models (Logistic Regression, Decision Tree, Random Forest, etc.) were evaluated for delivery predictions, with Random Forest and Logistic Regression showing high accuracy in distinguishing outcomes.</p>
-
-            <div class="subheading">Fraud Detection</div>
-            <p>Models like Random Forest and XGBoost achieved near-perfect accuracy in fraud detection, with metrics such as ROC-AUC confirming high reliability.</p>
-
-            <div class="subheading">Customer Segmentation</div>
-            <p>RFM (Recency, Frequency, Monetary) analysis categorized customers by purchasing behavior, enabling targeted engagement for different loyalty segments.</p>
-
-            <p><a href="https://github.com/KalaliNikitha/KalaliNikitha-Portfolio.git" target="_blank">View Methodology</a></p>
+        <div id="methodology-header" class="section-header">
+            <h2>Methodology</h2>
         </div>
-    </section>
+        <section id="methodology" class="section-content">
+            <div class="about-text">
+                <p>The aim is to describe the forecasting methods used in our study. All the models are trained and validated by an 80/20 split.</p>
+                
+                <div class="subheading">SARIMA Model</div>
+                <p>The SARIMA model was applied to capture seasonal patterns in demand, supporting inventory management by predicting spikes and dips in sales.</p>
 
-    <section id="results">
-        <h2>Final Results</h2>
-        <div class="about-text">
-            <p>Sales Forecasting Models and Evaluation Metrics:</p>
-            
-            <div class="subheading">SARIMA Results</div>
-            <p>Used for short-term demand forecasting, capturing seasonal trends but limited in handling volatility.</p>
+                <div class="subheading">Sales Forecasting</div>
+                <p>Regression Models: Linear Regression, Random Forest, Gradient Boosting, K-Neighbors, XGBoost, and LightGBM provided a range of approaches, each optimized through hyperparameter tuning to forecast sales trends accurately.</p>
 
-            <div class="subheading">Regression Results</div>
-            <p>Linear Regression, Gradient Boosting, Lasso, Ridge, ElasticNet, and AdaBoost were used, with Linear Regression showing the highest R² score, though potentially overfitting.</p>
+                <div class="subheading">Late Delivery</div>
+                <p>Classification models (Logistic Regression, Decision Tree, Random Forest, etc.) were evaluated for delivery predictions, with Random Forest and Logistic Regression showing high accuracy in distinguishing outcomes.</p>
 
-            <div class="subheading">Safety Stock</div>
-            <p>Calculated to prevent stockouts, optimizing inventory by adjusting stock levels based on sales forecasts.</p>
+                <div class="subheading">Fraud Detection</div>
+                <p>Models like Random Forest and XGBoost achieved near-perfect accuracy in fraud detection, with metrics such as ROC-AUC confirming high reliability.</p>
 
-            <div class="subheading">Delivery Prediction</div>
-            <p>Classification Models: Logistic Regression, Decision Tree, Random Forest, K-Nearest Neighbors, and AdaBoost were evaluated; Logistic Regression showed the best accuracy, with Random Forest and AdaBoost also performing well.</p>
+                <div class="subheading">Customer Segmentation</div>
+                <p>RFM (Recency, Frequency, Monetary) analysis categorized customers by purchasing behavior, enabling targeted engagement for different loyalty segments.</p>
 
-            <div class="subheading">Fraud Models</div>
-            <p>Models Used: Logistic Regression, Random Forest, Gradient Boosting, K-Nearest Neighbors, Decision Tree, and XGBoost all achieved high accuracy, with Random Forest showing near-perfect precision.</p>
+                <p><a href="https://github.com/KalaliNikitha/KalaliNikitha-Portfolio.git" target="_blank">View Methodology</a></p>
+            </div>
+        </section>
 
-            <div class="subheading">Evaluation</div>
-            <p>Confusion Matrix and Precision-Recall Curves helped assess model sensitivity and specificity in fraud detection.</p>
-
-            <div class="subheading">Customer Segments</div>
-            <p>Customer Segmentation: RFM analysis segmented customers by recency, frequency, and monetary value into groups like "Loyal Customers" and "Need Attention" to inform targeted engagement.</p>
-
-            <p><a href="https://github.com/KalaliNikitha/KalaliNikitha-Portfolio.git" target="_blank">View Results</a></p>
+        <div id="results-header" class="section-header">
+            <h2>Final Results</h2>
         </div>
-    </section>
+        <section id="results" class="section-content">
+            <div class="about-text">
+                <p>Sales Forecasting Models and Evaluation Metrics:</p>
+                
+                <div class="subheading">SARIMA Results</div>
+                <p>Used for short-term demand forecasting, capturing seasonal trends but limited in handling volatility.</p>
+
+                <div class="subheading">Regression Results</div>
+                <p>Linear Regression, Gradient Boosting, Lasso, Ridge, ElasticNet, and AdaBoost were used, with Linear Regression showing the highest R² score, though potentially overfitting.</p>
+
+                <div class="subheading">Safety Stock</div>
+                <p>Calculated to prevent stockouts, optimizing inventory by adjusting stock levels based on sales forecasts.</p>
+
+                <div class="subheading">Delivery Prediction</div>
+                <p>Classification Models: Logistic Regression, Decision Tree, Random Forest, K-Nearest Neighbors, and AdaBoost were evaluated; Logistic Regression showed the best accuracy, with Random Forest and AdaBoost also performing well.</p>
+
+                <div class="subheading">Fraud Models</div>
+                <p>Models Used: Logistic Regression, Random Forest, Gradient Boosting, K-Nearest Neighbors, Decision Tree, and XGBoost all achieved high accuracy, with Random Forest showing near-perfect precision.</p>
+
+                <div class="subheading">Evaluation</div>
+                <p>Confusion Matrix and Precision-Recall Curves helped assess model sensitivity and specificity in fraud detection.</p>
+
+                <div class="subheading">Customer Segments</div>
+                <p>Customer Segmentation: RFM analysis segmented customers by recency, frequency, and monetary value into groups like "Loyal Customers" and "Need Attention" to inform targeted engagement.</p>
+
+                <p><a href="https://github.com/KalaliNikitha/KalaliNikitha-Portfolio.git" target="_blank">View Results</a></p>
+            </div>
+        </section>
+    </div>
 
     <footer>
         <p>&copy; 2024 Nikitha Kalali. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hide all section content initially
+            const allSections = document.querySelectorAll('.section-content');
+            allSections.forEach(section => {
+                section.classList.remove('section-active');
+            });
+
+            // Add click event listeners to section headers
+            const sectionHeaders = document.querySelectorAll('.section-header');
+            sectionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const sectionId = this.id.replace('-header', '');
+                    const section = document.getElementById(sectionId);
+                    
+                    // Toggle active class
+                    this.classList.toggle('active');
+                    section.classList.toggle('section-active');
+                });
+            });
+
+            // Add click event listeners to navigation links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    const targetHeader = document.getElementById(targetId + '-header');
+                    
+                    // Hide all sections
+                    allSections.forEach(section => {
+                        section.classList.remove('section-active');
+                    });
+                    
+                    // Remove active class from all headers
+                    sectionHeaders.forEach(header => {
+                        header.classList.remove('active');
+                    });
+                    
+                    // Show target section and mark header as active
+                    targetSection.classList.add('section-active');
+                    targetHeader.classList.add('active');
+                    
+                    // Scroll to the section
+                    targetHeader.scrollIntoView({behavior: 'smooth'});
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
