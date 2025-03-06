@@ -38,6 +38,16 @@
             width: 100%;
         }
 
+        /* Style for subheadings */
+        .subheading {
+            color: #ffffff;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            width: 100%;
+        }
+
         section {
             padding: 20px;
             margin: 20px auto;
@@ -185,19 +195,20 @@
         <h2>Methodology</h2>
         <div class="about-text">
             <p>The aim is to describe the forecasting methods used in our study. All the models are trained and validated by an 80/20 split.</p>
-            <h3>Demand Forecasting with SARIMA:</h3>
+            
+            <div class="subheading">SARIMA Model</div>
             <p>The SARIMA model was applied to capture seasonal patterns in demand, supporting inventory management by predicting spikes and dips in sales.</p>
 
-            <h3>Sales Forecasting Models:</h3>
+            <div class="subheading">Sales Forecasting</div>
             <p>Regression Models: Linear Regression, Random Forest, Gradient Boosting, K-Neighbors, XGBoost, and LightGBM provided a range of approaches, each optimized through hyperparameter tuning to forecast sales trends accurately.</p>
 
-            <h3>Late Delivery Prediction:</h3>
+            <div class="subheading">Late Delivery</div>
             <p>Classification models (Logistic Regression, Decision Tree, Random Forest, etc.) were evaluated for delivery predictions, with Random Forest and Logistic Regression showing high accuracy in distinguishing outcomes.</p>
 
-            <h3>Fraud Detection:</h3>
+            <div class="subheading">Fraud Detection</div>
             <p>Models like Random Forest and XGBoost achieved near-perfect accuracy in fraud detection, with metrics such as ROC-AUC confirming high reliability.</p>
 
-            <h3>Customer Segmentation with RFM Analysis:</h3>
+            <div class="subheading">Customer Segmentation</div>
             <p>RFM (Recency, Frequency, Monetary) analysis categorized customers by purchasing behavior, enabling targeted engagement for different loyalty segments.</p>
 
             <p><a href="https://github.com/KalaliNikitha/KalaliNikitha-Portfolio.git" target="_blank">View Methodology</a></p>
@@ -208,25 +219,26 @@
         <h2>Final Results</h2>
         <div class="about-text">
             <p>Sales Forecasting Models and Evaluation Metrics:</p>
-            <h3>SARIMA Model:</h3>
+            
+            <div class="subheading">SARIMA Results</div>
             <p>Used for short-term demand forecasting, capturing seasonal trends but limited in handling volatility.</p>
 
-            <h3>Regression Models:</h3>
+            <div class="subheading">Regression Results</div>
             <p>Linear Regression, Gradient Boosting, Lasso, Ridge, ElasticNet, and AdaBoost were used, with Linear Regression showing the highest R² score, though potentially overfitting.</p>
 
-            <h3>Safety Stock and Reorder Threshold:</h3>
+            <div class="subheading">Safety Stock</div>
             <p>Calculated to prevent stockouts, optimizing inventory by adjusting stock levels based on sales forecasts.</p>
 
-            <h3>Late Delivery Prediction:</h3>
+            <div class="subheading">Delivery Prediction</div>
             <p>Classification Models: Logistic Regression, Decision Tree, Random Forest, K-Nearest Neighbors, and AdaBoost were evaluated; Logistic Regression showed the best accuracy, with Random Forest and AdaBoost also performing well.</p>
 
-            <h3>Fraud Detection Models:</h3>
+            <div class="subheading">Fraud Models</div>
             <p>Models Used: Logistic Regression, Random Forest, Gradient Boosting, K-Nearest Neighbors, Decision Tree, and XGBoost all achieved high accuracy, with Random Forest showing near-perfect precision.</p>
 
-            <h3>Evaluation:</h3>
+            <div class="subheading">Evaluation</div>
             <p>Confusion Matrix and Precision-Recall Curves helped assess model sensitivity and specificity in fraud detection.</p>
 
-            <h3>RFM Analysis and Customer Segmentation:</h3>
+            <div class="subheading">Customer Segments</div>
             <p>Customer Segmentation: RFM analysis segmented customers by recency, frequency, and monetary value into groups like "Loyal Customers" and "Need Attention" to inform targeted engagement.</p>
 
             <p><a href="https://github.com/KalaliNikitha/KalaliNikitha-Portfolio.git" target="_blank">View Results</a></p>
